@@ -4,8 +4,9 @@
 // a = -9 b = -3 -> max = -3
 
 Console.WriteLine("Введите первое число");
-string a = Console.ReadLine();
-int numberA = Convert.ToInt32(a);
+int numberA = Convert.ToInt32(Console.ReadLine());
+// string a = Console.ReadLine();
+// int numberA = Convert.ToInt32(a);
 Console.WriteLine("Введите второе число");
 string b = Console.ReadLine();
 int numberB = Convert.ToInt32(b);
