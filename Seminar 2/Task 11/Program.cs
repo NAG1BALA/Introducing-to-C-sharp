@@ -13,4 +13,4 @@ int lastDigit = number % 10;
 int midDigit = firstDigit * 10 + lastDigit;
 // Console.WriteLine(midDigit);
 
-Console.WriteLine($"Исходное число { number}, Первая цифра = { firstDigit }, Вторая цифра = { midDigit }");
+Console.WriteLine($"Исходное число {number}, Первая цифра = {firstDigit}, Вторая цифра = {midDigit}");
