@@ -123,14 +123,37 @@
 
 
 
-double Fibonacci(int n)
-{
-    if(n == 1 || n == 2) return 1;
-    else return Fibonacci(n-1) + Fibonacci(n-2);
-}
+// double Fibonacci(int n)
+// {
+//     if(n == 1 || n == 2) return 1;
+//     else return Fibonacci(n-1) + Fibonacci(n-2);
+// }
 
-for (int i = 1; i < 50; i++)
-{
-    Console.WriteLine($"f({i}) = {Fibonacci(i)}");
-}
+// for (int i = 1; i < 50; i++)
+// {
+//     Console.WriteLine($"f({i}) = {Fibonacci(i)}");
+// }
+
+
+
+
+
+
+
+
+
+
+ulong[] fib = new ulong[50];
+
+
+ulong fibonachi(uint n) {
+
+    if( n == 0) {return fib[0] = 0; }
+    else if ( n == 1) { return fib[1] = 1; }
+    else return fib[n] = fib [n - 2] + fib[n - 1];
+    }
+
+    for (uint i = 0; i < 50; i++) {
+        Console.WriteLine($"Число фибоначи {i} = {fibonachi(i)}");
+    }
 
