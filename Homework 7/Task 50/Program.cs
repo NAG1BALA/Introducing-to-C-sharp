@@ -41,30 +41,22 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void ShowRequest(int[,] matrix)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            i = ReadInt("Введите номер строки в двумерном массиве");
-            j = ReadInt("Введите номер столбца в двумерном массиве");
-            if(i > matrix.GetLength(0) || j > matrix.GetLength(1))
-            Console.WriteLine("Числа с заданной позицией в массиве не существует");
-            else
-            Console.Write($"Элемент по вашему запросу {matrix[i, j]}");
-            break;
-        }
-        break;
-    }
-}
-
 int[,] myMatrix = GetRandomMatrix(ROWS, COLUMNS);
 PrintMatrix(myMatrix);
-ShowRequest(myMatrix);
 
-
-
-
-
-
+for (int i = 0; i < myMatrix.GetLength(0); i++)
+{
+    for (int j = 0; j < myMatrix.GetLength(1); j++)
+    {
+        i = ReadInt("Введите номер строки в двумерном массиве");
+        j = ReadInt("Введите номер столбца в двумерном массиве");
+        if (i >= myMatrix.GetLength(0)
+        || i < 0
+        || j >= myMatrix.GetLength(1)
+        || j < 0)
+            Console.WriteLine("Числа с заданной позицией в массиве не существует");
+        else
+            Console.Write($"Элемент по вашему запросу {myMatrix[i, j]}");
+        return;
+    }
+}

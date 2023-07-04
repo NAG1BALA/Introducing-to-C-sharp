@@ -38,10 +38,12 @@ void PrintMatrix(int[,] matrix)
 int[,] myMatrix = GetRandomMatrix(ROWS, COLUMNS);
 PrintMatrix(myMatrix);
 
-double delitel = 3.0;
-double sum1 = (myMatrix[0, 0] + myMatrix[1, 0] + myMatrix[2, 0]) / delitel;
-double sum2 = (myMatrix[0, 1] + myMatrix[1, 1] + myMatrix[2, 1]) / delitel;
-double sum3 = (myMatrix[0, 2] + myMatrix[1, 2] + myMatrix[2, 2]) / delitel;
-double sum4 = (myMatrix[0, 3] + myMatrix[1, 3] + myMatrix[2, 3]) / delitel;
-
-Console.WriteLine($"Среднее арифметическое каждого столбца {sum1:f1}, {sum2:f1}, {sum3:f1}, {sum4:f1}");
+for (int j = 0; j < myMatrix.GetLength(1); j++)
+{
+    double sum = 0;
+    for (int i = 0; i < myMatrix.GetLength(0); i++)
+    {
+        sum += myMatrix[i, j];
+    }
+    Console.Write($"{ sum / myMatrix.GetLength(0):f1}\t ");
+}
