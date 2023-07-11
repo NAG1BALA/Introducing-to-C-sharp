@@ -2,7 +2,7 @@
 // N = 5 -> "1, 2, 3, 4, 5"
 // N = 6 -> "1, 2, 3, 4, 5, 6"
 
-int number = 10;
+int number = 5;
 
 void Perechislenie(int LastNumber)
 {

@@ -5,10 +5,10 @@
 int numberM = 4;
 int numberN = 8;
 
-void Perechislenie(int LastNumber)
+void Perechislenie(int LastNumber, int FirstNumber)
 {
-    if(LastNumber < numberM) return;
-    Perechislenie(LastNumber - 1);
+    if(LastNumber <= FirstNumber -1) return;
+    Perechislenie(LastNumber - 1, FirstNumber);
     Console.Write(LastNumber + "  ");
 }
-Perechislenie(numberN);
+Perechislenie(numberN,numberM);
